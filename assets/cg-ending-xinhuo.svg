@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" font-family="'Noto Serif SC','Songti SC','SimSun',serif" xml:lang="zh-CN">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="88%">
+      <stop offset="0%" stop-color="#F6EEDB"/>
+      <stop offset="62%" stop-color="#F3EAD7"/>
+      <stop offset="100%" stop-color="#E7D9BF"/>
+    </radialGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="53"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F9E7BF" stop-opacity="0.95"/>
+      <stop offset="55%" stop-color="#F3EAD7" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#F3EAD7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" filter="url(#grain)" opacity="0.05"/>
+  <rect x="48" y="48" width="1504" height="804" fill="none" stroke="#3A3328" stroke-width="2" opacity="0.5"/>
+  <rect x="60" y="60" width="1480" height="780" fill="none" stroke="#3A3328" stroke-width="1" opacity="0.22"/>
+
+  <!-- 烛光连成一线（薪火之路） -->
+  <path d="M800,430 C 720,360 640,320 300,180" stroke="#3A3328" stroke-width="1.5" fill="none" opacity="0.25" stroke-dasharray="3 8"/>
+  <g fill="#A13A2A">
+    <circle cx="800" cy="430" r="7" opacity="0.95"/>
+    <circle cx="700" cy="360" r="5.5" opacity="0.8"/>
+    <circle cx="600" cy="300" r="4.5" opacity="0.62"/>
+    <circle cx="500" cy="250" r="3.6" opacity="0.46"/>
+    <circle cx="400" cy="210" r="3" opacity="0.32"/>
+    <circle cx="300" cy="180" r="2.4" opacity="0.22"/>
+  </g>
+
+  <!-- 中心暖光 -->
+  <circle cx="800" cy="430" r="150" fill="url(#glow)" opacity="0.7"/>
+
+  <!-- 双手交接一盏灯 -->
+  <path d="M560,760 C 600,620 680,540 760,520" stroke="#3A3328" stroke-width="34" fill="none" stroke-linecap="round"/>
+  <path d="M1040,760 C 1000,620 920,540 840,520" stroke="#3A3328" stroke-width="34" fill="none" stroke-linecap="round"/>
+  <circle cx="768" cy="516" r="26" fill="#3A3328"/>
+  <circle cx="832" cy="516" r="26" fill="#3A3328"/>
+
+  <!-- 灯 -->
+  <g fill="#3A3328">
+    <rect x="796" y="440" width="8" height="40"/>
+    <path d="M786,438 h28 c0,14 -5,18 -14,18 c-9,0 -14,-4 -14,-18 Z"/>
+  </g>
+  <ellipse cx="800" cy="422" rx="10" ry="15" fill="#A13A2A" opacity="0.95"/>
+  <ellipse cx="800" cy="424" rx="5" ry="8" fill="#F3EAD7"/>
+
+  <!-- 朱砂小印 -->
+  <g transform="translate(1452,764)">
+    <rect x="0" y="0" width="72" height="72" fill="none" stroke="#A13A2A" stroke-width="2.5" rx="2"/>
+    <text x="36" y="34" text-anchor="middle" font-size="20" fill="#A13A2A">求</text>
+    <text x="36" y="58" text-anchor="middle" font-size="20" fill="#A13A2A">是</text>
+  </g>
+</svg>

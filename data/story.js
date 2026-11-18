@@ -23,6 +23,7 @@ window.STORY = {
     c01: {
       scene: "杭州 · 1937年9月",
       title: "临行，带什么上路",
+      history: ["h01"],
       text: "淞沪会战的炮声一天天逼近，学校决定迁校。你只有一个行囊的位置，能带走的东西有限。此去山高水长，你会带上什么？",
       choices: [
         { text: "带几本最重的书和讲义——学问不能断。", delta: { qz: 1 }, goto: "c02" },
@@ -59,6 +60,7 @@ window.STORY = {
     c05: {
       scene: "建德 · 1937年11月",
       title: "警报响起的那一刻",
+      history: ["h02"],
       text: "学校暂驻建德梅城。一天，敌机来袭，警报骤然拉响，人群四散。你最先把力气花在哪里？",
       choices: [
         { text: "护住图书和仪器，不让它们毁于一旦。", delta: { qz: 1 }, goto: "c06" },
@@ -95,6 +97,7 @@ window.STORY = {
     c09: {
       scene: "江西泰和 · 1938年",
       title: "办学之余",
+      history: ["h03","h04"],
       text: "在泰和办学的半年多里，课程照常，课余却处处是事。你更愿意把时间花在哪里？",
       choices: [
         { text: "读书、整理笔记，把功课做扎实。", delta: { qz: 1 }, goto: "c10" },
@@ -131,6 +134,7 @@ window.STORY = {
     c13: {
       scene: "广西宜山 · 1938年10月",
       title: "最难熬的日子",
+      history: ["h05","h06","h07"],
       text: "宜山疟疾流行，敌机轰炸，缺粮少药。这是西迁路上最难熬的一段，你怎么撑过去？",
       choices: [
         { text: "咬牙坚持读书，把功课做下去。", delta: { qz: 1 }, goto: "c14" },
@@ -167,6 +171,7 @@ window.STORY = {
     c17: {
       scene: "贵州遵义 · 湄潭 · 1940年",
       title: "安定下来的夜里",
+      history: ["h08","h09","h10","h11","h12"],
       text: "学校终于在遵义、湄潭、永兴安顿下来。煤油灯点亮的夜里，你把精力放在何处？",
       choices: [
         { text: "在油灯下钻研自己的学问。", delta: { qz: 1 }, goto: "@end" },
@@ -189,30 +194,35 @@ window.STORY = {
       id: "ending_qiushi",
       subtitle: "结局 · 求真",
       title: "求是学人",
+      cg: "assets/cg-ending-qiushi.svg",
       text: "你在颠沛中始终没有放下书本。煤油灯下演算，草棚里做实验，把知识一寸寸守了下来。多年后你站在讲台上，把西迁那年的坚持，讲给新一代浙大学子听。\n\n——你守住的，不只是学问，更是求是二字的分量。"
     },
     ending_shigan: {
       id: "ending_shigan",
       subtitle: "结局 · 务实",
       title: "实干报国",
+      cg: "assets/cg-ending-shigan.svg",
       text: "你把学问落到了乡土上。修堤、办校、垦荒，你在每一次弯下腰的劳作里，找到了知识真正的去向。后来你投身建设一线，用所学改造乡村、兴办教育。\n\n——务求实学，存是去非，你把它走成了路。"
     },
     ending_dandang: {
       id: "ending_dandang",
       subtitle: "结局 · 担当",
       title: "公忠坚毅",
+      cg: "assets/cg-ending-dandang.svg",
       text: "你把「树我邦国」四个字活成了日常。警报声里扶起受伤的同学，缺医少药时四处奔走，还教当地的孩子认字。后来你走向教育与公共事业，把当年守望的温度，一路传了下去。\n\n——公忠坚毅，是你对求是二字最好的注脚。"
     },
     ending_xinhuo: {
       id: "ending_xinhuo",
       subtitle: "结局 · 薪火",
       title: "薪火相传",
+      cg: "assets/cg-ending-xinhuo.svg",
       text: "你既守住了学问，又脚踏实地，更心怀家国。竺可桢说，浙大学子要从「会读书的人」长成「会创造的人」——你正是走出了这条路。多年后，你成为把「求是」二字传给下一代的那批人。\n\n——烽火能迁走校园，却迁不走薪火相传的求是之魂。"
     },
     ending_zailai: {
       id: "ending_zailai",
       subtitle: "结局 · 回望",
       title: "再走一次",
+      cg: "assets/cg-ending-zailai.svg",
       text: "那几年，你一度消沉、随波逐流。直到很多年后，你在校史馆里重新读到「求是」二字，才真正读懂那段路的分量。你回头，决定再走一次。\n\n——读懂，从来都不算晚。"
     }
   }

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" font-family="'Noto Serif SC','Songti SC','SimSun',serif" xml:lang="zh-CN">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="88%">
+      <stop offset="0%" stop-color="#F6EEDB"/>
+      <stop offset="62%" stop-color="#F3EAD7"/>
+      <stop offset="100%" stop-color="#E7D9BF"/>
+    </radialGradient>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="31"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" filter="url(#grain)" opacity="0.05"/>
+  <rect x="48" y="48" width="1504" height="804" fill="none" stroke="#3A3328" stroke-width="2" opacity="0.5"/>
+  <rect x="60" y="60" width="1480" height="780" fill="none" stroke="#3A3328" stroke-width="1" opacity="0.22"/>
+
+  <!-- 朱砂残阳 -->
+  <circle cx="260" cy="330" r="70" fill="#A13A2A" opacity="0.55"/>
+
+  <!-- 远处梯田 -->
+  <g fill="none" stroke="#3A3328" stroke-width="3" stroke-linecap="round">
+    <path d="M0,430 Q400,410 800,430 T1600,430" opacity="0.16"/>
+    <path d="M0,470 Q400,450 800,470 T1600,470" opacity="0.22"/>
+    <path d="M0,512 Q400,492 800,512 T1600,512" opacity="0.26"/>
+    <path d="M0,556 Q400,536 800,556 T1600,556" opacity="0.32"/>
+  </g>
+
+  <!-- 水流 -->
+  <g fill="none" stroke="#3A3328" stroke-width="2.5" opacity="0.5">
+    <path d="M1200,360 C 1260,460 1280,580 1260,720"/>
+    <path d="M1300,360 C 1360,460 1380,580 1360,720"/>
+    <path d="M1250,430 q20,26 0,52 q-20,26 0,52"/>
+    <path d="M1250,560 q20,26 0,52 q-20,26 0,52"/>
+  </g>
+
+  <!-- 田埂劳作剪影（持锄） -->
+  <g fill="#3A3328">
+    <rect x="660" y="420" width="10" height="300" rx="4" transform="rotate(-22 665 420)"/>
+    <path d="M700,690 l62,4 l3,18 l-62,-4 Z"/>
+    <path d="M556,722 L544,802 L572,802 L580,722 Z"/>
+    <path d="M620,722 L632,800 L660,800 L652,722 Z"/>
+    <path d="M520,642 Q590,602 660,662 L656,762 L524,762 Q520,704 520,642 Z"/>
+    <path d="M600,622 L648,540" stroke="#3A3328" stroke-width="20" stroke-linecap="round" fill="none"/>
+    <path d="M598,684 L652,644" stroke="#3A3328" stroke-width="20" stroke-linecap="round" fill="none"/>
+    <circle cx="600" cy="596" r="30"/>
+    <path d="M570,592 Q600,576 630,592 L630,598 L570,598 Z"/>
+  </g>
+
+  <!-- 地面 -->
+  <path d="M300,806 H1320" stroke="#3A3328" stroke-width="2" opacity="0.3"/>
+  <ellipse cx="610" cy="808" rx="180" ry="12" fill="#3A3328" opacity="0.1"/>
+
+  <!-- 朱砂小印 -->
+  <g transform="translate(1452,764)">
+    <rect x="0" y="0" width="72" height="72" fill="none" stroke="#A13A2A" stroke-width="2.5" rx="2"/>
+    <text x="36" y="34" text-anchor="middle" font-size="20" fill="#A13A2A">求</text>
+    <text x="36" y="58" text-anchor="middle" font-size="20" fill="#A13A2A">是</text>
+  </g>
+</svg>

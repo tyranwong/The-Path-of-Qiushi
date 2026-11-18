@@ -33,6 +33,7 @@
     <!-- 标题页 -->
     <section id="screen-title" class="screen">
       <div class="paper-card title-card">
+        <img class="cg cg-title" src="assets/cg-title.svg" alt="" onerror="this.style.display='none'">
         <div class="seal">求<br>是</div>
         <h1 class="game-title">求是之路</h1>
         <div class="game-sub">西迁 · 1940</div>
@@ -60,6 +61,7 @@
     <!-- 结局页 -->
     <section id="screen-ending" class="screen hidden">
       <div class="paper-card card">
+        <img class="cg cg-ending" id="cg-ending" src="" alt="" onerror="this.style.display='none'">
         <div class="scene" id="ending-sub"></div>
         <h2 class="card-title" id="ending-title"></h2>
         <p class="card-text" id="ending-text"></p>
@@ -76,7 +78,7 @@
       <div class="history-wrap">
         <div class="history-head">
           <h2 class="card-title">校史图鉴</h2>
-          <p class="history-note">以下史料均经公开来源核实，仅作背景陈述。</p>
+          <p class="history-note">以下史料均经公开来源核实，仅作背景陈述。未解锁的卡片会在旅途中逐渐点亮。</p>
         </div>
         <div id="history-list" class="history-list"></div>
         <div class="menu">
@@ -85,6 +87,26 @@
       </div>
     </section>
   </main>
+
+  <!-- 校史卡解锁 toast（非阻塞） -->
+  <div id="toast" class="toast hidden"></div>
+
+  <!-- 校史卡详情弹窗 -->
+  <div id="history-modal" class="modal hidden">
+    <div class="modal-paper">
+      <div class="modal-head">
+        <span class="modal-title">新解锁的校史卡</span>
+        <button id="modal-close" class="modal-close" aria-label="关闭">×</button>
+      </div>
+      <div id="modal-list" class="modal-list"></div>
+    </div>
+  </div>
+
+  <!-- 西迁路线迷你图 -->
+  <aside id="route-map" class="route-map hidden">
+    <button id="rm-toggle" class="rm-toggle" type="button">西迁路线<span class="rm-arrow">▾</span></button>
+    <div id="route-map-stations" class="rm-stations"></div>
+  </aside>
 
   <footer id="footer">
     <span>求是之路 · 西迁1940</span>

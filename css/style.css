@@ -162,3 +162,63 @@ body{
 .about-p{font-size:14.5px;line-height:2;color:var(--ink);}
 .about-list{list-style:none;font-size:14.5px;line-height:2.2;}
 .about-list a{color:var(--cinnabar);text-decoration:none;border-bottom:1px solid var(--cinnabar-soft);}
+
+/* ---------- CG 图 ---------- */
+.cg{display:block;width:100%;height:auto;border-radius:3px;border:1px solid rgba(58,51,40,.16);margin-bottom:18px;background:#f0e7d0;}
+.cg-title{margin-bottom:8px;}
+
+/* ---------- 校史卡解锁 toast（非阻塞） ---------- */
+.toast{
+  position:fixed;top:76px;right:16px;z-index:40;max-width:300px;
+  background:rgba(243,234,215,.97);border:1px solid rgba(58,51,40,.28);border-radius:6px;
+  padding:12px 14px;box-shadow:0 8px 24px rgba(60,50,30,.28);
+  display:flex;align-items:center;gap:10px;animation:toastIn .35s ease;
+}
+.toast-title{font-size:13px;letter-spacing:1px;color:var(--cinnabar);white-space:nowrap;}
+.toast-name{font-size:15px;font-weight:600;letter-spacing:2px;}
+.toast-btn{
+  margin-left:auto;font-family:inherit;font-size:12px;letter-spacing:2px;white-space:nowrap;
+  color:var(--paper);background:var(--ink);border:none;border-radius:3px;padding:6px 10px;cursor:pointer;
+}
+.toast-btn:hover{background:var(--cinnabar);}
+@keyframes toastIn{from{opacity:0;transform:translateY(-8px);}to{opacity:1;transform:translateY(0);}}
+
+/* ---------- 校史卡详情弹窗 ---------- */
+.modal{position:fixed;inset:0;z-index:50;background:rgba(40,32,20,.45);display:flex;align-items:center;justify-content:center;padding:20px;}
+.modal-paper{
+  width:100%;max-width:560px;max-height:80vh;overflow-y:auto;
+  background:var(--paper);border:1px solid rgba(58,51,40,.3);border-radius:6px;
+  padding:22px 24px;box-shadow:0 20px 60px rgba(40,32,20,.4);
+}
+.modal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.modal-title{font-size:16px;letter-spacing:3px;color:var(--cinnabar);font-weight:600;}
+.modal-close{font-size:22px;line-height:1;background:none;border:none;color:var(--ink);cursor:pointer;padding:0 4px;}
+.modal-close:hover{color:var(--cinnabar);}
+.modal-list{display:flex;flex-direction:column;gap:14px;}
+
+/* ---------- 西迁路线迷你图 ---------- */
+.route-map{
+  position:fixed;right:14px;bottom:14px;z-index:30;
+  background:rgba(243,234,215,.95);border:1px solid rgba(58,51,40,.26);border-radius:6px;
+  padding:8px 12px;box-shadow:0 4px 16px rgba(60,50,30,.2);font-size:12px;min-width:104px;
+}
+.rm-toggle{
+  width:100%;font-family:inherit;font-size:12px;letter-spacing:2px;color:var(--ink-soft);
+  background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;
+}
+.rm-arrow{transition:transform .2s ease;}
+.route-map.collapsed .rm-arrow{transform:rotate(-90deg);}
+.rm-stations{display:flex;flex-direction:column;gap:4px;margin-top:6px;}
+.rm-station{display:flex;align-items:center;gap:7px;opacity:.4;}
+.rm-station.done{opacity:.8;}
+.rm-station.cur{opacity:1;}
+.rm-dot{width:8px;height:8px;border-radius:50%;background:rgba(58,51,40,.4);flex:none;}
+.rm-station.done .rm-dot{background:#7a6a4a;}
+.rm-station.cur .rm-dot{background:var(--cinnabar);width:10px;height:10px;box-shadow:0 0 0 3px rgba(161,58,42,.2);}
+.rm-station.cur .rm-label{color:var(--cinnabar);font-weight:700;}
+.rm-label{letter-spacing:1px;}
+.route-map.collapsed .rm-stations{display:none;}
+
+/* 图鉴未解锁卡 */
+.h-card.locked{opacity:.55;}
+.h-card.locked .h-title{color:var(--ink-soft);}

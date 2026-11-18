@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" font-family="'Noto Serif SC','Songti SC','SimSun',serif" xml:lang="zh-CN">
+  <defs>
+    <filter id="paper" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="7" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0" result="g"/>
+      <feComponentTransfer in="g" result="g2">
+        <feFuncA type="linear" slope="0.05" intercept="0"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" in2="g2" mode="multiply"/>
+    </filter>
+    <radialGradient id="paperbg" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#F6EEDB"/>
+      <stop offset="70%" stop-color="#F3EAD7"/>
+      <stop offset="100%" stop-color="#E9DCC2"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 宣纸底 -->
+  <rect x="0" y="0" width="1000" height="700" fill="url(#paperbg)"/>
+  <rect x="0" y="0" width="1000" height="700" filter="url(#paper)" fill="#F3EAD7" opacity="0.6"/>
+
+  <!-- 纸张内框（信笺式描边） -->
+  <rect x="28" y="28" width="944" height="644" fill="none" stroke="#3A3328" stroke-width="2" opacity="0.55"/>
+  <rect x="38" y="38" width="924" height="624" fill="none" stroke="#3A3328" stroke-width="1" opacity="0.3"/>
+
+  <!-- 标题 -->
+  <text x="500" y="88" text-anchor="middle" font-size="40" fill="#3A3328" letter-spacing="6">求是之路 · 西迁路线示意图</text>
+  <line x1="330" y1="108" x2="670" y2="108" stroke="#A13A2A" stroke-width="1.5" opacity="0.7"/>
+
+  <!-- 路线（折线，柔和） -->
+  <path d="M 150 260 C 260 200, 300 200, 360 220 S 460 260, 540 300 S 640 360, 720 400 S 820 430, 860 460"
+        fill="none" stroke="#3A3328" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+
+  <!-- 行进箭头 -->
+  <g fill="#3A3328">
+    <path d="M 360 220 l -14 -6 v 12 z"/>
+    <path d="M 540 300 l -14 -6 v 12 z"/>
+    <path d="M 720 400 l -14 -6 v 12 z"/>
+    <path d="M 860 460 l -14 -6 v 12 z"/>
+  </g>
+
+  <!-- 回程虚线：遵义回杭州 -->
+  <path d="M 860 500 C 700 560, 500 580, 300 560 C 220 550, 180 520, 150 470"
+        fill="none" stroke="#3A3328" stroke-width="1.5" stroke-dasharray="8 8" opacity="0.55"/>
+  <text x="510" y="596" text-anchor="middle" font-size="17" fill="#3A3328" opacity="0.8">1946.9 复员回杭</text>
+
+  <!-- 站点 1：杭州 -->
+  <g>
+    <circle cx="150" cy="260" r="9" fill="#A13A2A"/>
+    <circle cx="150" cy="260" r="4" fill="#F3EAD7"/>
+    <text x="150" y="232" text-anchor="middle" font-size="24" fill="#3A3328">杭州</text>
+    <text x="150" y="300" text-anchor="middle" font-size="14" fill="#3A3328" opacity="0.75">1937.9 离杭</text>
+  </g>
+
+  <!-- 站点 2：建德 -->
+  <g>
+    <circle cx="360" cy="220" r="7" fill="#3A3328"/>
+    <text x="360" y="192" text-anchor="middle" font-size="22" fill="#3A3328">建德</text>
+    <text x="360" y="252" text-anchor="middle" font-size="13" fill="#3A3328" opacity="0.7">1937.11</text>
+  </g>
+
+  <!-- 站点 3：江西泰和 -->
+  <g>
+    <circle cx="540" cy="300" r="7" fill="#3A3328"/>
+    <text x="540" y="272" text-anchor="middle" font-size="22" fill="#3A3328">江西泰和</text>
+    <text x="540" y="332" text-anchor="middle" font-size="13" fill="#3A3328" opacity="0.7">1938</text>
+  </g>
+
+  <!-- 站点 4：广西宜山 -->
+  <g>
+    <circle cx="720" cy="400" r="7" fill="#3A3328"/>
+    <text x="720" y="372" text-anchor="middle" font-size="22" fill="#3A3328">广西宜山</text>
+    <text x="720" y="432" text-anchor="middle" font-size="13" fill="#3A3328" opacity="0.7">1938.10</text>
+  </g>
+
+  <!-- 站点 5：遵义·湄潭 -->
+  <g>
+    <circle cx="860" cy="460" r="10" fill="#A13A2A"/>
+    <circle cx="860" cy="460" r="4.5" fill="#F3EAD7"/>
+    <text x="860" y="426" text-anchor="middle" font-size="26" fill="#A13A2A">遵义·湄潭</text>
+    <text x="860" y="494" text-anchor="middle" font-size="15" fill="#3A3328" opacity="0.85">1940 定居</text>
+  </g>
+
+  <!-- 朱砂红「求是」印章 -->
+  <g transform="translate(826 590)">
+    <rect x="0" y="0" width="120" height="120" fill="none" stroke="#A13A2A" stroke-width="3" rx="4"/>
+    <rect x="8" y="8" width="104" height="104" fill="none" stroke="#A13A2A" stroke-width="1" rx="2"/>
+    <text x="60" y="56" text-anchor="middle" font-size="34" fill="#A13A2A" letter-spacing="4">求</text>
+    <text x="60" y="100" text-anchor="middle" font-size="34" fill="#A13A2A" letter-spacing="4">是</text>
+  </g>
+
+  <!-- 落款小字 -->
+  <text x="500" y="660" text-anchor="middle" font-size="13" fill="#3A3328" opacity="0.5" letter-spacing="2">国立浙江大学西迁 · 示意路线</text>
+</svg>

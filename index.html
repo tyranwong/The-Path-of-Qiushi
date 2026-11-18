@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>求是之路 · 西迁1940</title>
+  <meta name="description" content="浙江大学传播实践创意类作品：文字冒险网页游戏《求是之路·西迁1940》">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- ============ 顶部三值栏（游戏中常驻） ============ -->
+  <header id="hud" class="hidden">
+    <div class="hud-inner">
+      <div class="bar-item">
+        <span class="bar-label">求真</span>
+        <div class="bar"><div id="bar-qz" class="bar-fill fill-qz"></div></div>
+        <span id="val-qz" class="bar-val">5</span>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">务实</span>
+        <div class="bar"><div id="bar-ws" class="bar-fill fill-ws"></div></div>
+        <span id="val-ws" class="bar-val">5</span>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">担当</span>
+        <div class="bar"><div id="bar-dd" class="bar-fill fill-dd"></div></div>
+        <span id="val-dd" class="bar-val">5</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="app">
+    <!-- 标题页 -->
+    <section id="screen-title" class="screen">
+      <div class="paper-card title-card">
+        <div class="seal">求<br>是</div>
+        <h1 class="game-title">求是之路</h1>
+        <div class="game-sub">西迁 · 1940</div>
+        <div class="rule"></div>
+        <p class="tagline" id="tagline"></p>
+        <div class="menu">
+          <button id="btn-start" class="btn btn-primary">开始</button>
+          <button id="btn-continue" class="btn hidden">继续上次</button>
+          <button id="btn-history" class="btn">校史图鉴</button>
+          <a class="btn btn-link" href="关于本作.html">关于本作</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 剧情卡 -->
+    <section id="screen-card" class="screen hidden">
+      <div class="paper-card card">
+        <div class="scene" id="card-scene"></div>
+        <h2 class="card-title" id="card-title"></h2>
+        <p class="card-text" id="card-text"></p>
+        <div class="choices" id="choices"></div>
+      </div>
+    </section>
+
+    <!-- 结局页 -->
+    <section id="screen-ending" class="screen hidden">
+      <div class="paper-card card">
+        <div class="scene" id="ending-sub"></div>
+        <h2 class="card-title" id="ending-title"></h2>
+        <p class="card-text" id="ending-text"></p>
+        <div class="menu">
+          <button id="btn-history2" class="btn">查看校史图鉴</button>
+          <button id="btn-restart" class="btn btn-primary">再走一次</button>
+          <a class="btn btn-link" href="关于本作.html">关于本作</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 校史图鉴 -->
+    <section id="screen-history" class="screen hidden">
+      <div class="history-wrap">
+        <div class="history-head">
+          <h2 class="card-title">校史图鉴</h2>
+          <p class="history-note">以下史料均经公开来源核实，仅作背景陈述。</p>
+        </div>
+        <div id="history-list" class="history-list"></div>
+        <div class="menu">
+          <button id="btn-back-title" class="btn">返回首页</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <span>求是之路 · 西迁1940</span>
+    <span class="sep">｜</span>
+    <a href="关于本作.html">关于本作</a>
+  </footer>
+
+  <script src="data/story.js"></script>
+  <script src="data/history.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>

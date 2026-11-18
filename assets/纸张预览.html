@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>纸张预览 · 求是之路</title>
+<style>
+  :root{
+    --paper:#F3EAD7;
+    --paper-light:#F6EEDB;
+    --paper-dark:#E9DCC2;
+    --ink:#3A3328;
+    --cinnabar:#A13A2A;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    background:#dcd3c0;
+    background-image:
+      radial-gradient(circle at 50% 0%, rgba(255,255,255,0.15), transparent 60%),
+      linear-gradient(180deg,#d8cfba 0%,#c8bfa8 100%);
+    font-family:'Noto Serif SC','Songti SC','SimSun',serif;
+    color:var(--ink);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 20px;
+    -webkit-font-smoothing:antialiased;
+  }
+  /* 纸张主体 */
+  .paper{
+    position:relative;
+    width:800px;
+    min-height:1000px;
+    background:var(--paper);
+    background-image:
+      radial-gradient(circle at 50% 40%, var(--paper-light) 0%, var(--paper) 55%, var(--paper-dark) 100%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' seed='7'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+    box-shadow:
+      0 1px 3px rgba(0,0,0,0.18),
+      0 12px 34px rgba(60,50,30,0.28),
+      0 30px 60px rgba(60,50,30,0.18);
+    border-radius:3px;
+  }
+  /* 暗角（边缘略深） */
+  .paper::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background:radial-gradient(ellipse at center, transparent 55%, rgba(90,70,40,0.22) 100%);
+    border-radius:3px;
+  }
+  /* 四角微卷 + 描边 */
+  .paper::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    border:1px solid rgba(58,51,40,0.35);
+    border-radius:3px;
+  }
+  .corner{
+    position:absolute;
+    width:34px;height:34px;
+    border:0 solid rgba(58,51,40,0.5);
+    pointer-events:none;
+  }
+  .corner.tl{top:14px;left:14px;border-top-width:1.5px;border-left-width:1.5px;border-top-left-radius:4px;}
+  .corner.tr{top:14px;right:14px;border-top-width:1.5px;border-right-width:1.5px;border-top-right-radius:4px;}
+  .corner.bl{bottom:14px;left:14px;border-bottom-width:1.5px;border-left-width:1.5px;border-bottom-left-radius:4px;}
+  .corner.br{bottom:14px;right:14px;border-bottom-width:1.5px;border-right-width:1.5px;border-bottom-right-radius:4px;}
+  /* 极淡「求是」水印 */
+  .watermark{
+    position:absolute;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%) rotate(-12deg);
+    font-size:150px;
+    letter-spacing:24px;
+    color:var(--cinnabar);
+    opacity:0.055;
+    pointer-events:none;
+    user-select:none;
+    white-space:nowrap;
+  }
+  /* 页眉落款 */
+  .header{
+    position:relative;
+    padding:52px 60px 0;
+    text-align:center;
+    z-index:1;
+  }
+  .header .title{
+    font-size:30px;
+    letter-spacing:8px;
+    font-weight:400;
+  }
+  .header .rule{
+    margin:14px auto 0;
+    width:180px;
+    height:1px;
+    background:var(--cinnabar);
+    opacity:0.6;
+  }
+</style>
+</head>
+<body>
+  <div class="paper">
+    <span class="corner tl"></span>
+    <span class="corner tr"></span>
+    <span class="corner bl"></span>
+    <span class="corner br"></span>
+    <span class="watermark">求是</span>
+    <div class="header">
+      <div class="title">求是之路</div>
+      <div class="rule"></div>
+    </div>
+  </div>
+</body>
+</html>
